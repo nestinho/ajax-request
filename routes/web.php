@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('add',[StudentController::class, 'index']);
 Route::post('store',[StudentController::class, 'store']);
+Route::post('ajaxstore',[StudentController::class, 'ajaxstore']);

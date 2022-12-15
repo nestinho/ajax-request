@@ -22,4 +22,15 @@ class StudentController extends Controller
        $student->save();
        return back()->with('status','saved!');
     }
+
+    public function ajaxstore(Request $request)
+    {
+       $student = new Student();
+       $student->fname = $request->input('fname');
+       $student->lname = $request->input('lname');
+       $student->course = $request->input('course');
+       $student->section = $request->input('section');
+       $student->save();
+       return back()->with('status','saved!');
+    }
 }
